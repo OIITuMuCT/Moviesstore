@@ -12,6 +12,26 @@
   </head>
   <body>
     <!-- Header -->
+     <nav class="p-3 navbar navbar-dark bg-dark navbar-expand-lg">
+      <div class="container">
+        <a href="{% url "home.index" %}" class="navbar-brand">
+          <img src="{% static "img/logo.png" %}" alt="logo" height="40" />
+        </a>
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" 
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto navbar-ml">
+            <a href="{% url "home.about" %}" class="nav-link">About</a>
+          </div>
+        </div>
+      </div>
+     </nav>
     <!-- Header -->
     <div>{% block content %} {% endblock content %}</div>
     <!-- Footer -->
